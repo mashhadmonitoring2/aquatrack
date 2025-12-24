@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکواترک | پایش پیشرفته کیفیت آب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <style>
+      body { 
+        font-family: 'Vazirmatn', sans-serif; 
+        background-color: #f8fafc;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+      
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 1cm;
+        }
+        .no-print { display: none !important; }
+        body { background: white !important; padding: 0 !important; }
+        main { display: block !important; max-width: 100% !important; margin: 0 !important; }
+        #main-content { 
+          display: block !important; 
+          grid-template-columns: 1fr !important;
+          padding: 0 !important;
+          width: 100% !important;
+        }
+        section { width: 100% !important; float: none !important; margin: 0 !important; }
+        aside { display: none !important; }
+        .rounded-[3rem], .rounded-[2.5rem], .rounded-[2rem], .rounded-3xl { 
+          border-radius: 0.5rem !important; 
+          border: 1px solid #e2e8f0 !important; 
+          box-shadow: none !important;
+          margin-bottom: 30px !important;
+          overflow: visible !important;
+        }
+        .recharts-responsive-container { 
+          width: 100% !important; 
+          height: 400px !important; 
+          page-break-inside: avoid;
+        }
+        .page-break-before-always { page-break-before: always !important; }
+        .page-break-inside-avoid { page-break-inside: avoid !important; }
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

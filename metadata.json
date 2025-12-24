@@ -1,0 +1,5 @@
+{
+  "name": "AquaTrack Analytics",
+  "description": "A high-performance water quality monitoring dashboard designed to visualize electrical conductivity and nitrate trends across multiple sampling periods with AI-powered anomaly detection.",
+  "requestFramePermissions": []
+}
